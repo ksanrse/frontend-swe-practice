@@ -3,7 +3,6 @@
 import datetime as dt
 import json
 import re
-import sqlite3
 import subprocess
 from pathlib import Path
 
@@ -22,17 +21,22 @@ def run(*args):
 run('git', 'pull', '--ff-only')
 tasks = json.loads(TASKS.read_text())['tasks']
 by_key = {(t['source'], norm(t['title'])): t for t in tasks}
-conn = sqlite3.connect(DB_URI, uri=True)
-rows = conn.execute("""
+query = """
 SELECT title,
-       json_extract(props_json, '$.source'),
-       json_extract(props_json, '$.submittedAt'),
-       COALESCE(json_extract(props_json, '$.accepted'), 1)
+       json_extract(props_json, '$.source') AS source,
+       json_extract(props_json, '$.submittedAt') AS submittedAt,
+       COALESCE(json_extract(props_json, '$.accepted'), 1) AS accepted
 FROM objects
 WHERE type_id = 'coding_submission_obj' AND deleted_at IS NULL
-""").fetchall()
+"""
+result = subprocess.run(
+    ['sudo', '-n', 'sqlite3', '-readonly', '-json', '/var/lib/kosmos-sync/prod/ark.db', query],
+    check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+)
+rows = json.loads(result.stdout)
 completed = {}
-for title, source, submitted_at, accepted in rows:
+for row in rows:
+    title, source, submitted_at, accepted = row['title'], row['source'], row['submittedAt'], row['accepted']
     source = SOURCES.get(source or '')
     if not accepted or not source or not title:
         continue

@@ -11,6 +11,7 @@ TASKS = ROOT / 'public/tasks.json'
 PROGRESS = ROOT / 'public/progress.json'
 DB_URI = 'file:/var/lib/kosmos-sync/prod/ark.db?mode=ro'
 SOURCES = {'bigfrontend': 'BigFrontEnd', 'greatfrontend': 'GreatFrontEnd', 'coderun': 'CodeRun', 'codewars': 'Codewars'}
+CURRICULUM_START = '2026-08-24T00:00:00+00:00'
 
 def norm(value: str) -> str:
     return re.sub(r'\s+', ' ', value.replace(' — завершено', '').strip().lower())
@@ -38,10 +39,14 @@ completed = {}
 for row in rows:
     title, source, submitted_at, accepted = row['title'], row['source'], row['submittedAt'], row['accepted']
     source = SOURCES.get(source or '')
-    if not accepted or not source or not title:
+    if not accepted or not source or not title or not submitted_at or submitted_at < CURRICULUM_START:
         continue
     key = (source, norm(title))
     task = by_key.get(key)
+    # ARK stores the BFE memoization task under its original title;
+    # the curated list uses the equivalent general memo() formulation.
+    if not task and source == 'BigFrontEnd' and norm(title) == '122. implement memoizeone()':
+        task = by_key.get((source, norm('Implement a general memoization function - `memo()`')))
     if task:
         completed[f'{source}|{task["title"]}'] = {'completed': True, 'completedAt': submitted_at}
 

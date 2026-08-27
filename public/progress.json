@@ -1,4 +1,125 @@
 {
-  "updatedAt": null,
-  "completed": {}
+  "updatedAt": "2026-08-27T08:53:02.052915+00:00",
+  "completed": {
+    "Codewars|Extract the domain name from a URL": {
+      "completed": true,
+      "completedAt": "2026-01-25T11:28:43.497+00:00"
+    },
+    "Codewars|Count characters in your string": {
+      "completed": true,
+      "completedAt": "2025-09-11T05:19:06.292+00:00"
+    },
+    "Codewars|Your order, please": {
+      "completed": true,
+      "completedAt": "2025-08-18T10:06:41.558+00:00"
+    },
+    "Codewars|A Needle in the Haystack": {
+      "completed": true,
+      "completedAt": "2024-04-24T10:37:37.040+00:00"
+    },
+    "GreatFrontEnd|Throttle": {
+      "completed": true,
+      "completedAt": "2026-03-23T11:21:17.113+00:00"
+    },
+    "GreatFrontEnd|Array.prototype.reduce": {
+      "completed": true,
+      "completedAt": "2026-03-18T11:59:33.360+00:00"
+    },
+    "GreatFrontEnd|Star Rating": {
+      "completed": true,
+      "completedAt": "2026-03-17T14:27:24.058+00:00"
+    },
+    "GreatFrontEnd|List Format": {
+      "completed": true,
+      "completedAt": "2026-03-17T13:38:22.972+00:00"
+    },
+    "GreatFrontEnd|Deep Equal": {
+      "completed": true,
+      "completedAt": "2026-03-17T12:50:32.413+00:00"
+    },
+    "GreatFrontEnd|jQuery.css": {
+      "completed": true,
+      "completedAt": "2026-01-26T13:07:53.353+00:00"
+    },
+    "GreatFrontEnd|getElementsByTagName": {
+      "completed": true,
+      "completedAt": "2026-01-26T12:06:39.195+00:00"
+    },
+    "GreatFrontEnd|Curry": {
+      "completed": true,
+      "completedAt": "2026-01-24T13:47:41.808+00:00"
+    },
+    "GreatFrontEnd|Flatten": {
+      "completed": true,
+      "completedAt": "2026-01-24T12:31:27.898+00:00"
+    },
+    "GreatFrontEnd|Promise.all": {
+      "completed": true,
+      "completedAt": "2026-01-24T12:23:39.733+00:00"
+    },
+    "GreatFrontEnd|Classnames": {
+      "completed": true,
+      "completedAt": "2026-01-22T14:38:00.292+00:00"
+    },
+    "GreatFrontEnd|Todo List": {
+      "completed": true,
+      "completedAt": "2025-11-27T12:09:18.526+00:00"
+    },
+    "GreatFrontEnd|Make Counter": {
+      "completed": true,
+      "completedAt": "2025-11-05T15:09:57.736+00:00"
+    },
+    "GreatFrontEnd|Function Length": {
+      "completed": true,
+      "completedAt": "2025-11-05T15:04:36.857+00:00"
+    },
+    "GreatFrontEnd|Debounce": {
+      "completed": true,
+      "completedAt": "2025-10-22T18:25:17.754+00:00"
+    },
+    "GreatFrontEnd|Array.prototype.filter": {
+      "completed": true,
+      "completedAt": "2025-10-17T14:36:18.195+00:00"
+    },
+    "GreatFrontEnd|useTimeout": {
+      "completed": true,
+      "completedAt": "2025-09-27T15:26:59.836+00:00"
+    },
+    "GreatFrontEnd|useArray": {
+      "completed": true,
+      "completedAt": "2025-09-25T14:55:15.657+00:00"
+    },
+    "GreatFrontEnd|Tabs": {
+      "completed": true,
+      "completedAt": "2025-09-24T16:21:23.201+00:00"
+    },
+    "GreatFrontEnd|useCycle": {
+      "completed": true,
+      "completedAt": "2025-09-23T14:33:43.140+00:00"
+    },
+    "GreatFrontEnd|useCounter II": {
+      "completed": true,
+      "completedAt": "2025-09-23T14:13:27.162+00:00"
+    },
+    "GreatFrontEnd|Progress Bars": {
+      "completed": true,
+      "completedAt": "2025-09-23T13:33:03.856+00:00"
+    },
+    "GreatFrontEnd|Accordion": {
+      "completed": true,
+      "completedAt": "2025-09-23T12:03:32.367+00:00"
+    },
+    "GreatFrontEnd|useCounter": {
+      "completed": true,
+      "completedAt": "2025-09-22T12:50:26.696+00:00"
+    },
+    "GreatFrontEnd|useBoolean": {
+      "completed": true,
+      "completedAt": "2025-09-22T12:02:29.552+00:00"
+    },
+    "GreatFrontEnd|Counter": {
+      "completed": true,
+      "completedAt": "2025-09-22T11:04:41.867+00:00"
+    }
+  }
 }
